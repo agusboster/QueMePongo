@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/27517fada0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/js/generales.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="icon" href="/img/logosolo.png">
+    <link rel="stylesheet" href="/css/usuarios.estilos.css">
+    <title>Calificar inferior</title>
+</head>
+<body>
+<header>
+    <img src="/img/utnlogo.png.png" alt="utn logo" class="utnLogo">
+    <div class="diseniologo">
+        <img src="/img/logosolo.png" alt="diseniologo" style="">
+        <p>Diseño de Sistemas</p>
+    </div>
+</header>
+<div class="main_container">
+
+    <div class="contenedor-carta-prenda">
+        <form class="carta-prenda">
+
+            <div class="form-cargar-prenda">
+                <div class="" style="text-align:center;">
+                    <label for="input-img-usuario"><img src="/img/usuario.png" class="imagen-perfil" alt=""></label>
+                    <input id="input-img-usuario" type="file" name="" value="" style="display:none;">
+                </div>
+                <div class="" style="margin:40px;">
+                    <label><i class="fas fa-tshirt"></i> Calificacion inferior</label>
+                    <br>
+                    <br>
+
+                    <br>
+                    <a href="/frioInf/{{usuario.idUsuario}}/{{guardarropas.idGuardarropas}}" class="btn-border-blue fuente"><i class="fas fa-user-plus" style="margin-bottom:25px;"></i> Sentí frio</a>
+                    <br>
+
+                    <br>
+                    <a href="/nadaInf/{{usuario.idUsuario}}/{{guardarropas.idGuardarropas}}" class="btn-border-blue fuente"><i class="fas fa-user-plus" style="margin-bottom:25px;"></i> Estuvo bien</a>
+                    <br>
+
+                    <br>
+                    <a href="/calorInf/{{usuario.idUsuario}}/{{guardarropas.idGuardarropas}}" class="btn-border-blue fuente"><i class="fas fa-user-plus" style="margin-bottom:25px;"></i> Sentí calor</a>
+                    <br>
+
+                </div>
+            </div>
+        </form>
+        </form>
+    </div>
+</div>
+</body>
+</html>

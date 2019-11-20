@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/27517fada0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/js/generales.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="icon" href="/img/logosolo.png">
+    <link rel="stylesheet" href="/css/usuarios.estilos.css">
+    <title>Nuevo usuario</title>
+</head>
+<body>
+<header>
+    <img src="/img/utnlogo.png" alt="utn logo" class="utnLogo">
+    <div class="diseniologo">
+        <img src="/img/logosolo.png" alt="diseniologo" style="">
+        <p>Diseño de Sistemas</p>
+    </div>
+</header>
+<div class="main_container">
+
+    <div class="contenedor-carta-prenda">
+        <div class="carta-prenda">
+            <form class="" {{#if prenda}} action="/prenda/{{prenda.idPrenda}}" method="post" {{else}} action="/prenda/{{usuario.idUsuario}}" method="post" {{/if}} style="">
+
+                <div class="form-cargar-prenda">
+                    <div class="" style="text-align:center;">
+                        <label for="input-img-usuario"><img src="/img/usuario.png" class="imagen-perfil" alt=""></label>
+                        <input id="input-img-usuario" type="file" name="" value="" style="display:none;">
+                    </div>
+
+                    <div class="" style="margin:40px;">
+                        <label><i class="fas fa-tshirt"></i> Nuevo Usuario</label>
+                        <br>
+                        <br>
+                        <br>
+                        <label><i class="fas fa-file-signature"></i> Username</label>
+                        <br>
+                        <input type="text" name="username" class="input-datos" placeholder="Descripcion de prenda">
+                        <br>
+                        <br>
+                        <label><i class="fas fa-file-signature"></i>  Password</label>
+                        <br>
+                        <input type="text" name="password" class="input-datos" {{#if prenda}} value="{{prenda.material}}" {{/if}} placeholder="Material">
+                        <br>
+                        <br>
+                        <label><i class="fas fa-file-signature"></i>  Número de telefono</label>
+                        <br>
+                        <br>
+                        <input type="number"  class="input-datos" name="telefono" {{#if prenda}} value="{{prenda.capa.numeroCapa}}" {{/if}} placeholder="Numero de capa">
+                        <br>
+                        <br>
+                        <label><i class="fas fa-file-signature"></i>  Email</label>
+                        <br>
+                        <br>
+                        <input type="number"  class="input-datos" name="email"  placeholder="Nivel de abrigo">
+                        <br>
+
+
+                    </div>
+                    {{#if prenda}}
+                        <input type="submit" name="" class="btn-verde" style="float:right;"  value="Guardar cambios">
+                    {{else}}
+                        <input type="submit" name="" class="btn-verde" style="float:right;"  value="Crear prenda">
+                    {{/if}}
+                    <a href="/prendas/{{prenda.idGuardarropas}}" class="btn-border-blue" style="">Volver</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

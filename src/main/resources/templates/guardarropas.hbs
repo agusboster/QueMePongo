@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/27517fada0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/js/generales.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="icon" href="img/logosolo.png">
+    <link rel="stylesheet" href="/css/usuarios.estilos.css">
+    <title>Guardarropas</title>
+</head>
+<body id="body">
+<header>
+    <img src="/img/utnlogo.png" alt="utn logo" class="utnLogo">
+    <div class="diseniologo">
+        <img src="/img/logosolo.png" alt="diseniologo" style="">
+        <p>Diseño de Sistemas</p>
+    </div>
+
+</header>
+<div class="main_container">
+    <h1 class="encabezado"><i class="fas fa-users"></i> Guardarropas</h1>
+    <input type="text" name="" value="" placeholder="Buscar" id="inputUsuario">
+    <a href="/prenda/{{usuario.idUsuario}}" class="btn-border-blue fuente"><i class="fas fa-plus-square" style="margin-bottom:25px;"></i> Agregar prenda</a>
+    <table class="tabla" id="tabla">
+        <thead>
+        <th><i class="fas fa-user"></i> Descripcion</th>
+        <th><i class="fas fa-tshirt"></i> Ver prendas</th>
+        <th><i class="fas fa-calendar-star"></i> Sugerir atuendo</th>
+        </thead>
+        <tbody>
+        {{#each guardarropas}}
+            <tr>
+                <td>{{descripcion}}</td>
+                <td>
+                    <!--<a href="/usuario/{{id}}" name="button" style="margin:0px;" class="btn btn-border btn-border-blue" ><i class="far fa-eye"></i></a>-->
+                    <!--<a href="/usuario/{{id}}" name="button" class=" btn btn-edit"><i class="fas fa-user-edit"></i></a>-->
+                <a href="/prendas/{{idGuardarropas}}" name="button" class=" btn btn-edit"><i class="fas fa-user-edit"></i></a>
+                </td>
+                <td>
+                <a href="/sugerencia/{{idGuardarropas}}/{{usuario.idUsuario}}" name="button" class=" btn btn-edit"><i class="fas fa-user-edit"></i></a>
+                </td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+</body>
+
+
+</html>

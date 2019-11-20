@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/27517fada0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/js/generales.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="icon" href="img/logosolo.png">
+    <link rel="stylesheet" href="/css/usuarios.estilos.css">
+    <title>Prendas</title>
+</head>
+<body id="body">
+<header>
+    <img src="/img/utnlogo.png" alt="utn logo" class="utnLogo">
+    <div class="diseniologo">
+        <img src="/img/logosolo.png" alt="diseniologo" style="">
+        <p>Diseño de Sistemas</p>
+    </div>
+
+</header>
+<div class="main_container">
+    <h1 class="encabezado"><i class="fas fa-calendar-times"></i> Eventos</h1>
+    <input type="text" name="" value="" placeholder="Buscar" id="inputUsuario">
+    <a href="/eventoNuevo/{{usuario.idUsuario}}" class="btn-border-blue fuente"><i class="fas fa-calendar-plus" style="margin-bottom:25px;"></i> Agregar evento</a>
+    <table class="tabla" id="tabla">
+        <thead>
+        <th><i class="fas fa-calendar-week"></i> Descripcion</th>
+        <th><i class="fas fa-clock"></i> Días que faltan</th>
+        <th><i class="fas fa-calendar-star"></i> Sugerir </th>
+
+        </thead>
+        <tbody>
+        {{#each eventos}}
+            <tr>
+                <td>{{descripcion}}</td>
+                <td>{{diasQueFaltan}}</td>
+                <!--<a href="/usuario/{{id}}" name="button" style="margin:0px;" class="btn btn-border btn-border-blue" ><i class="far fa-eye"></i></a>-->
+                <!--<a href="/usuario/{{id}}" name="button" class=" btn btn-edit"><i class="fas fa-user-edit"></i></a>-->
+
+                <td>
+                    <a href="/atuendo/{{idEvento}}/{{guardarropas.idGuardarropas}}/{{usuario.idUsuario}}" name="button" class=" btn btn-edit"><i class="fas fa-user-edit"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+    <a href="/guardarropas/{{guardarropas.idGuardarropas}}" class="btn-border-blue" style="">Volver</a>
+</div>
+</body>
+
+
+</html>
